@@ -1,0 +1,30 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@fontName           : 'Droid Serif';
+@emSize             : 24px;
+@fontSize           : 24px;
+
+@primaryColor       : #23022E;
+@secondaryColor     : #1B9AAA;
+
+@borderColor        : #DDDBCB;
+
+/*-------------------
+       Links
+--------------------*/
+
+@linkColor           : lighten(@primaryColor, 10);
+@linkUnderline       : none;
+@linkHoverColor      : lighten(@primaryColor, 20);
+@linkHoverUnderline  : @linkUnderline;
+
+/*-------------------
+        Page
+--------------------*/
+
+@pageBackground      : #F5F1E3;
+@pageOverflowX       : hidden;
+
+@textColor           : @primaryColor;
