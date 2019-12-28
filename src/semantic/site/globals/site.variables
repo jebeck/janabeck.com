@@ -7,7 +7,7 @@
 @fontSize           : 24px;
 
 @primaryColor       : #FF5D73;
-@secondaryColor     : #7C7A7A;
+@secondaryColor     : #F9ADA0;
 
 @borderColor        : #494949;
 

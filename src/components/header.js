@@ -3,8 +3,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Menu } from "semantic-ui-react"
 import styled from "styled-components"
+import { transparentize } from "polished"
 
-import { TextShadow } from "../styled"
+import { textBg } from "../utils/colors"
 
 const LINKS = [
   {
@@ -29,8 +30,8 @@ const LINKS = [
   },
 ]
 
-const LinkText = styled(TextShadow)`
-  background-color: rgba(73, 73, 73, 0.5);
+const LinkText = styled.span`
+  background-color: ${transparentize(0.4, textBg)};
   font-family: "Exo 2";
   font-weight: ${props => (props.active ? 800 : 400)};
   padding: 0.5rem 0.75rem;
