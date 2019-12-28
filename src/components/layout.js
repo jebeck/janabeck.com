@@ -42,7 +42,7 @@ BackgroundImg.propTypes = {
 }
 
 const StyledBackgroundImg = styled(BackgroundImg)`
-  background-position: bottom center;
+  background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
