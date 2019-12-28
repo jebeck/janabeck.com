@@ -1,15 +1,16 @@
 import { Link } from "gatsby"
-import React, { useRef } from "react"
+import React from "react"
 import PropTypes from "prop-types"
-import { lighten } from "polished"
 import { Menu } from "semantic-ui-react"
-import { MOBILE_WIDTH } from "typography-breakpoint-constants"
-import styled, { createGlobalStyle } from "styled-components"
-import useComponentSize from "@rehooks/component-size"
+import styled from "styled-components"
 
-import { border, text } from "../utils/colors"
+import { TextShadow } from "../styled"
 
 const LINKS = [
+  {
+    path: "/",
+    text: "home",
+  },
   {
     path: "/about",
     text: "about",
@@ -28,117 +29,57 @@ const LINKS = [
   },
 ]
 
-const GlobalLinkStyle = createGlobalStyle`
-  a {
-    &:active,
-    &:hover,
-    &:focus {
-      background-color: ${lighten(0.125, border)};
-      color: ${lighten(0.2, text)};
-      text-decoration: underline;
-    }
-  }
+const LinkText = styled(TextShadow)`
+  background-color: rgba(73, 73, 73, 0.5);
+  font-family: "Exo 2";
+  font-weight: ${props => (props.active ? 800 : 400)};
+  padding: 0.5rem 0.75rem;
 `
 
-const NavList = styled.nav`
-  align-items: center;
-  display: flex;
-  a {
-    padding: 0.5rem 1rem;
-  }
-`
-
-export default function Header({ siteTitle }) {
-  let siteTitleRef = useRef(null)
-  let { height } = useComponentSize(siteTitleRef)
-
-  const onMobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH})`).matches
-
+export default function Header({ location }) {
   return (
     <>
-      <GlobalLinkStyle />
-      <Menu borderless={onMobile ? true : false} fixed="top">
-        <Link to="/" ref={siteTitleRef}>
-          <Menu.Item style={{ fontWeight: "bold" }}>{siteTitle}</Menu.Item>
-        </Link>
-        {onMobile ? (
-          <Menu.Menu position="right">
-            <button
-              onClick={() => {}}
-              style={{
-                backgroundColor: "transparent",
-                border: "none",
-                height,
-                padding: "0.25em 0.75em",
-                width: `calc(${height}px + 1.5em)`,
-              }}
-            >
-              <svg
-                display="block"
-                height="100%"
-                style={{ pointerEvents: "none" }}
-                viewBox={`0 0 100 100`}
-                width="100%"
+      <Menu
+        borderless
+        fixed="right"
+        style={{ backgroundColor: "transparent" }}
+        vertical
+      >
+        {LINKS.map(({ href, path, text }) => {
+          const isActive = path ? location === path : false
+          if (path) {
+            return (
+              <Menu.Item
+                active={isActive}
+                key={path}
+                style={{ textAlign: isActive ? "left" : "right" }}
               >
-                {/* <rect fill="gray" height={100} width={100} x={0} y={0} /> */}
-                <line
-                  stroke={text}
-                  strokeWidth={6}
-                  x1={10}
-                  x2={90}
-                  y1={25}
-                  y2={25}
-                />
-                <line
-                  stroke={text}
-                  strokeWidth={6}
-                  x1={0}
-                  x2={100}
-                  y1={50}
-                  y2={50}
-                />
-                <line
-                  stroke={text}
-                  strokeWidth={6}
-                  x1={10}
-                  x2={90}
-                  y1={75}
-                  y2={75}
-                />
-              </svg>
-            </button>
-          </Menu.Menu>
-        ) : (
-          <Menu.Menu as={NavList} position="right">
-            {LINKS.map(({ href, path, text }) => {
-              if (path) {
-                return (
-                  <Link key={path} to={path}>
-                    {text}
-                  </Link>
-                )
-              } else if (href) {
-                return (
-                  <a
-                    href={href}
-                    key={href}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {text}
-                  </a>
-                )
-              } else {
-                return null
-              }
-            })}
-          </Menu.Menu>
-        )}
+                <Link to={path}>
+                  <LinkText active={isActive}>{text}</LinkText>
+                </Link>
+              </Menu.Item>
+            )
+          } else if (href) {
+            return (
+              <Menu.Item
+                key={href}
+                style={{ textAlign: isActive ? "left" : "right" }}
+              >
+                <a href={href} rel="noopener noreferrer" target="_blank">
+                  <LinkText active={isActive}>{text}</LinkText>
+                </a>
+              </Menu.Item>
+            )
+          } else {
+            return null
+          }
+        })}
       </Menu>
     </>
   )
 }
 
 Header.propTypes = {
+  location: PropTypes.string.isRequired,
   siteTitle: PropTypes.string,
 }

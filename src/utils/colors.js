@@ -1,8 +1,8 @@
 const colors = {
-  accent: "#1B9AAA",
-  bg: "#F5F1E3",
-  border: "#DDDBCB",
-  text: "#23022E",
+  accent: "#7C7A7A",
+  bg: "#461A20",
+  border: "#494949",
+  text: "#FF5D73",
 }
 
 export default colors

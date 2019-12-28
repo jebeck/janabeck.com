@@ -3,10 +3,10 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout location="/">
-    <SEO title="home" />
+const AboutPage = () => (
+  <Layout location="/about">
+    <SEO title="about" />
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage

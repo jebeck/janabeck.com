@@ -10,7 +10,7 @@ const typography = new Typography({
     },
     {
       name: "Exo 2",
-      styles: ["100", "300", "400", "400i", "900"],
+      styles: ["100", "300", "400", "400i", "700", "800", "900"],
     },
   ],
   headerFontFamily: ["Droid Serif", "serif"],

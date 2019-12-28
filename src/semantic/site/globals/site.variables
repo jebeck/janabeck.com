@@ -6,25 +6,25 @@
 @emSize             : 24px;
 @fontSize           : 24px;
 
-@primaryColor       : #23022E;
-@secondaryColor     : #1B9AAA;
+@primaryColor       : #FF5D73;
+@secondaryColor     : #7C7A7A;
 
-@borderColor        : #DDDBCB;
+@borderColor        : #494949;
 
 /*-------------------
        Links
 --------------------*/
 
-@linkColor           : lighten(@primaryColor, 10);
+@linkColor           : darken(@primaryColor, 2.5);
 @linkUnderline       : none;
-@linkHoverColor      : lighten(@primaryColor, 20);
+@linkHoverColor      : lighten(@primaryColor, 2.5);
 @linkHoverUnderline  : @linkUnderline;
 
 /*-------------------
         Page
 --------------------*/
 
-@pageBackground      : #F5F1E3;
+@pageBackground      : #461A20;
 @pageOverflowX       : hidden;
 
 @textColor           : @primaryColor;
