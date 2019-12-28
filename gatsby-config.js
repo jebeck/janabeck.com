@@ -6,6 +6,7 @@ module.exports = {
     author: "jana e. beck",
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-less`,
     {
       resolve: "gatsby-plugin-eslint",
