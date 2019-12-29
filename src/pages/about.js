@@ -9,6 +9,8 @@ import SEO from "../components/seo"
  * and will need Lato or another font for the IPA hint 😢
  */
 
+/** TODO: add pics (me partial profile laughing, GitHub profile image, magnolias image) */
+
 const AboutPage = () => (
   <Layout location="/about">
     <SEO title="about" />
