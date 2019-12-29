@@ -6354,6 +6354,11 @@ gray-percentage@^2.0.0:
   resolved "https://registry.yarnpkg.com/gray-percentage/-/gray-percentage-2.0.0.tgz#b72a274d1b1379104a0050b63b207dc53fe56f99"
   integrity sha1-tyonTRsTeRBKAFC2OyB9xT/lb5k=
 
+gsap@^3.0.4:
+  version "3.0.4"
+  resolved "http://artifactory.vertigo.stitchfix.com/artifactory/api/npm/aa-npm/gsap/-/gsap-3.0.4.tgz#865d2b1d5b2d8afad272e96d15f43e5409ab2b29"
+  integrity sha1-hl0rHVstivrScultFfQ+VAmrKyk=
+
 gud@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"

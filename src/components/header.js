@@ -1,11 +1,11 @@
-import { Link } from "gatsby"
 import React from "react"
 import PropTypes from "prop-types"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { Menu } from "semantic-ui-react"
 import styled from "styled-components"
 import { transparentize } from "polished"
 
-import { textBg } from "../utils/colors"
+import { bg, textBg } from "../utils/colors"
 
 const LINKS = [
   {
@@ -55,9 +55,9 @@ export default function Header({ location }) {
                 key={path}
                 style={{ textAlign: isActive ? "left" : "right" }}
               >
-                <Link to={path}>
+                <AniLink bg={bg} cover direction="top" to={path}>
                   <LinkText active={isActive}>{text}</LinkText>
-                </Link>
+                </AniLink>
               </Menu.Item>
             )
           } else if (href) {
