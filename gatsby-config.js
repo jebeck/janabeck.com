@@ -47,11 +47,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "janabeck.com",
-        short_name: "jana e. beck",
+        name: "jana e. beck",
+        short_name: "jebeck",
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#461A20`,
+        theme_color: `#FF5D73`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },

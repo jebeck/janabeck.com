@@ -2,9 +2,11 @@
      User Global Variables
 *******************************/
 
-@fontName           : 'Droid Serif';
 @emSize             : 24px;
 @fontSize           : 24px;
+
+@headerFont         : 'Exo 2';
+@pageFont           : 'Source Sans Pro';
 
 @primaryColor       : #FF5D73;
 @secondaryColor     : #F9ADA0;
@@ -16,7 +18,7 @@
 --------------------*/
 
 @linkColor           : darken(@primaryColor, 2.5);
-@linkUnderline       : none;
+@linkUnderline       : underline double lighten(@pageBackground, 10);
 @linkHoverColor      : lighten(@primaryColor, 2.5);
 @linkHoverUnderline  : @linkUnderline;
 

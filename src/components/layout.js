@@ -10,16 +10,17 @@ import PropTypes from "prop-types"
 import BackgroundImage from "gatsby-background-image"
 import { MOBILE_WIDTH } from "typography-breakpoint-constants"
 import styled, { createGlobalStyle } from "styled-components"
+import { transparentize } from "polished"
 import { useStaticQuery, graphql } from "gatsby"
 
 import "typeface-exo-2"
-import "typeface-droid-serif"
+import "typeface-source-sans-pro"
 
 import "semantic-ui-less/semantic.less"
 
-import { bg, text } from "../utils/colors"
+import { bg, border, textBg } from "../utils/colors"
 import Header from "./header"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import { TextShadow } from "../styled"
 
 function BackgroundImg({ className, image }) {
@@ -42,29 +43,25 @@ BackgroundImg.propTypes = {
 }
 
 const StyledBackgroundImg = styled(BackgroundImg)`
+  background-attachment: fixed;
   background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: cover;
+  border-bottom: 10px solid ${border};
   height: 100vh;
   width: 100vw;
 `
 
 const Global = createGlobalStyle`
-  :root {
-    color: ${text};
-  }
   :focus {
-    outline: none;
+    outline-color: #F9ADA0;
   }
 `
 
 const FooterEl = styled.footer`
-  ${scale(1 / 8)};
   font-family: "Exo 2";
-  font-weight: 800;
+  font-weight: 600;
   bottom: ${rhythm(1 / 4)};
   position: fixed;
-  right: ${rhythm(1 / 4)};
+  right: 1.125em;
 `
 
 const Layout = ({ children, location }) => {
@@ -87,8 +84,23 @@ const Layout = ({ children, location }) => {
       <Global />
       <StyledBackgroundImg image={data.bgImage} />
       <Header location={location} />
-      <div>
-        <main>{children}</main>
+      <div
+        style={{
+          left: 0,
+          position: "absolute",
+          top: 0,
+          width: `calc(100vw - 15rem)`,
+        }}
+      >
+        <main
+          style={{
+            background: children ? transparentize(0.05, textBg) : "transparent",
+            margin: rhythm(1),
+            padding: rhythm(2),
+          }}
+        >
+          {children}
+        </main>
         <FooterEl>
           <TextShadow>
             © jana e. beck, 2012–{`${new Date().getFullYear()}`}

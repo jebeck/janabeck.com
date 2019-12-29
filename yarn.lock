@@ -1832,7 +1832,7 @@ are-we-there-yet@~1.1.2:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
 
-argparse@^1.0.7:
+argparse@^1.0.10, argparse@^1.0.7:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
   integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
@@ -2040,6 +2040,13 @@ auto-bind@^3.0.0:
   version "3.0.0"
   resolved "http://artifactory.vertigo.stitchfix.com/artifactory/api/npm/aa-npm/auto-bind/-/auto-bind-3.0.0.tgz#67773e64899b228f6d2a841709e7e086cfed31a3"
   integrity sha1-Z3c+ZImbIo9tKoQXCefghs/tMaM=
+
+autolinker@~0.28.0:
+  version "0.28.1"
+  resolved "http://artifactory.vertigo.stitchfix.com/artifactory/api/npm/aa-npm/autolinker/-/autolinker-0.28.1.tgz#0652b491881879f0775dace0cdca3233942a4e47"
+  integrity sha1-BlK0kYgYefB3XazgzcoyM5QqTkc=
+  dependencies:
+    gulp-header "^1.7.1"
 
 autoprefixer@^9.7.3:
   version "9.7.3"
@@ -3247,6 +3254,13 @@ concat-stream@^1.5.0:
     inherits "^2.0.3"
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
+
+concat-with-sourcemaps@*:
+  version "1.1.0"
+  resolved "http://artifactory.vertigo.stitchfix.com/artifactory/api/npm/aa-npm/concat-with-sourcemaps/-/concat-with-sourcemaps-1.1.0.tgz#d4ea93f05ae25790951b99e7b3b09e3908a4082e"
+  integrity sha1-1OqT8FriV5CVG5nns7CeOQikCC4=
+  dependencies:
+    source-map "^0.6.1"
 
 config-chain@^1.1.11:
   version "1.1.12"
@@ -6363,6 +6377,15 @@ gud@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
   integrity sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
+
+gulp-header@^1.7.1:
+  version "1.8.12"
+  resolved "http://artifactory.vertigo.stitchfix.com/artifactory/api/npm/aa-npm/gulp-header/-/gulp-header-1.8.12.tgz#ad306be0066599127281c4f8786660e705080a84"
+  integrity sha1-rTBr4AZlmRJygcT4eGZg5wUICoQ=
+  dependencies:
+    concat-with-sourcemaps "*"
+    lodash.template "^4.4.0"
+    through2 "^2.0.0"
 
 gzip-size@3.0.0:
   version "3.0.0"
@@ -10479,6 +10502,13 @@ react-reconciler@^0.24.0:
     prop-types "^15.6.2"
     scheduler "^0.18.0"
 
+react-remarkable@^1.1.3:
+  version "1.1.3"
+  resolved "http://artifactory.vertigo.stitchfix.com/artifactory/api/npm/aa-npm/react-remarkable/-/react-remarkable-1.1.3.tgz#6ef3861812d806fbf747cc1d1e151ee3172130a6"
+  integrity sha1-bvOGGBLYBvv3R8wdHhUe4xchMKY=
+  dependencies:
+    remarkable "^1.x"
+
 react-side-effect@^1.1.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.1.5.tgz#f26059e50ed9c626d91d661b9f3c8bb38cd0ff2d"
@@ -10750,6 +10780,14 @@ regjsparser@^0.6.0:
   integrity sha512-RQ7YyokLiQBomUJuUG8iGVvkgOLxwyZM8k6d3q5SAXpg4r5TZJZigKFvC6PpD+qQ98bCDC5YelPeA3EucDoNeQ==
   dependencies:
     jsesc "~0.5.0"
+
+remarkable@^1.x:
+  version "1.7.4"
+  resolved "http://artifactory.vertigo.stitchfix.com/artifactory/api/npm/aa-npm/remarkable/-/remarkable-1.7.4.tgz#19073cb960398c87a7d6546eaa5e50d2022fcd00"
+  integrity sha1-GQc8uWA5jIen1lRuql5Q0gIvzQA=
+  dependencies:
+    argparse "^1.0.10"
+    autolinker "~0.28.0"
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -12420,15 +12458,15 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-droid-serif@^0.0.44:
-  version "0.0.44"
-  resolved "https://registry.yarnpkg.com/typeface-droid-serif/-/typeface-droid-serif-0.0.44.tgz#1e8aeb2e1c78e517cdeefa842378e184ebb81fa6"
-  integrity sha512-H6DkSR4ov/Mzf+wjTr3xIpBDqT/VjyheYsoj9zBpAf7oVXcwa0oERb+NMcHGI/ERkXQg/fhgSNEuZcN1B5FK8A==
-
 typeface-exo-2@^0.0.72:
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/typeface-exo-2/-/typeface-exo-2-0.0.72.tgz#dc7ecddd106264eab0fec76e931f2b9feb8b7329"
   integrity sha512-PKsXGtoMap2953TneJoHfS1UNwAzB7iB0YPcHu5P2pI+Y0AKLCv4ihfz1QZaW3OTP+rkB147L0Kd7ZxRRPkIvQ==
+
+typeface-source-sans-pro@^0.0.75:
+  version "0.0.75"
+  resolved "http://artifactory.vertigo.stitchfix.com/artifactory/api/npm/aa-npm/typeface-source-sans-pro/-/typeface-source-sans-pro-0.0.75.tgz#33e60ea079738c2dbdb2d0aa28f899f565e1646e"
+  integrity sha1-M+YOoHlzjC29stCqKPiZ9WXhZG4=
 
 typescript@^3.7.4:
   version "3.7.4"

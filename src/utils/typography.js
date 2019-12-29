@@ -5,15 +5,13 @@ const typography = new Typography({
   baseLineHeight: 1.66667,
   googleFonts: [
     {
-      name: "Droid Serif",
-      styles: ["700"],
+      name: "Source Sans Pro",
     },
     {
       name: "Exo 2",
-      styles: ["100", "300", "400", "400i", "700", "800", "900"],
     },
   ],
-  headerFontFamily: ["Droid Serif", "serif"],
+  headerFontFamily: ["Source Sans Pro", "sans-serif"],
   bodyFontFamily: ["Exo 2", "sans-serif"],
 })
 
