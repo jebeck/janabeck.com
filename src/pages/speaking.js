@@ -18,7 +18,7 @@ I too love sharing what I've learned on the job or on the side—feel free to [g
 
 I've had the honor of taking the stage at the following events:
 
-on **December 5th, 2019**, I present [escaping flatland: a romance of data science in the browser (slides)](http://janabeck.com/flatland/) in Paris, France; video coming soon!
+on **December 5th, 2019**, I presented [escaping flatland: a romance of data science in the browser (slides)](http://janabeck.com/flatland/) in Paris, France; video coming soon!
 
 on **June 20th, 2019**, I presented "Data science in the browser: DX & UX" at [DinosaurJS](https://dinosaurjs.org/) in Denver, Colorado
 
