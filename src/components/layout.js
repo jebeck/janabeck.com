@@ -8,6 +8,7 @@
 import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import BackgroundImage from "gatsby-background-image"
+import { grayscale } from "polished"
 import { MOBILE_WIDTH } from "typography-breakpoint-constants"
 import styled, { createGlobalStyle } from "styled-components"
 import { transparentize } from "polished"
@@ -18,10 +19,19 @@ import "typeface-source-sans-pro"
 
 import "semantic-ui-less/semantic.less"
 
-import { analogous, bg, border, textBg } from "../utils/colors"
+import { analogous, bg, border, text, textBg } from "../utils/colors"
 import Header from "./header"
+import Link from "./link"
 import { rhythm } from "../utils/typography"
 import { TextShadow } from "../styled"
+
+const BackLink = styled(TextShadow)`
+  ::before {
+    content: "< ";
+  }
+  color: ${grayscale(text)};
+  font-weight: 900;
+`
 
 function BackgroundImg({ className, image }) {
   return image ? (
@@ -100,7 +110,22 @@ const Layout = ({ children, location }) => {
     <>
       <Global onMobile={onMobile} />
       {onMobile ? (
-        <main>{children}</main>
+        <>
+          {location === "/" ? null : (
+            <nav
+              style={{
+                right: rhythm(1 / 2),
+                position: "fixed",
+                top: rhythm(1 / 8),
+              }}
+            >
+              <Link path="/" style={{ textDecoration: "none" }}>
+                <BackLink>back</BackLink>
+              </Link>
+            </nav>
+          )}
+          <main>{children}</main>
+        </>
       ) : (
         <>
           <StyledBackgroundImg image={data.bgImage} />
