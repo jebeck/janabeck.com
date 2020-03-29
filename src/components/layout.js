@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import BackgroundImage from "gatsby-background-image"
 import { MOBILE_WIDTH } from "typography-breakpoint-constants"
@@ -18,7 +18,7 @@ import "typeface-source-sans-pro"
 
 import "semantic-ui-less/semantic.less"
 
-import { bg, border, textBg } from "../utils/colors"
+import { analogous, bg, border, textBg } from "../utils/colors"
 import Header from "./header"
 import { rhythm } from "../utils/typography"
 import { TextShadow } from "../styled"
@@ -51,6 +51,18 @@ const StyledBackgroundImg = styled(BackgroundImg)`
 `
 
 const Global = createGlobalStyle`
+  body {
+    background: ${({ onMobile }) =>
+      onMobile
+        ? `linear-gradient(
+    ${analogous[0]} 33.33%,
+    ${analogous[1]} 46.67%,
+    ${analogous[2]} 60%,
+    ${analogous[3]} 73.33%,
+    ${analogous[4]} 86.67%
+  )`
+        : "initial"};
+  }
   :focus {
     outline-color: #F9ADA0;
   }
@@ -65,6 +77,11 @@ const FooterEl = styled.footer`
 `
 
 const Layout = ({ children, location }) => {
+  useEffect(() => {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty("--vh", `${vh}px`)
+  }, [])
+
   const data = useStaticQuery(graphql`
     query {
       bgImage: file(relativePath: { eq: "SGt.jpg" }) {
@@ -81,8 +98,10 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <Global />
-      {onMobile ? null : (
+      <Global onMobile={onMobile} />
+      {onMobile ? (
+        <main>{children}</main>
+      ) : (
         <>
           <StyledBackgroundImg image={data.bgImage} />
           <Header location={location} />

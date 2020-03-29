@@ -7,7 +7,7 @@ import { transparentize } from "polished"
 import { textBg } from "../utils/colors"
 import Link from "./link"
 
-const LINKS = [
+export const LINKS = [
   {
     path: "/",
     text: "home",
