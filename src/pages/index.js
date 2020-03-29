@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-import Layout from "../components/layout"
-import { rhythm } from "../utils/typography"
 import { bg, text } from "../utils/colors"
+import Layout from "../components/layout"
+import { MOBILE_WIDTH } from "typography-breakpoint-constants"
+import { rhythm } from "../utils/typography"
 import { TextShadow } from "../styled"
 
 const NameHeader = styled.h1`
@@ -17,13 +18,24 @@ const NameHeader = styled.h1`
   -webkit-text-stroke-color: ${bg};
 `
 
-const IndexPage = () => (
-  <>
-    <NameHeader>
-      <TextShadow>jana e. beck</TextShadow>
-    </NameHeader>
-    <Layout location="/"></Layout>
-  </>
-)
+const MobileNameHeader = styled(NameHeader)`
+  left: 0;
+  text-align: center;
+  width: 100%;
+`
+
+const IndexPage = () => {
+  const onMobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH})`).matches
+  const HeaderComponent = onMobile ? MobileNameHeader : NameHeader
+
+  return (
+    <>
+      <HeaderComponent>
+        <TextShadow>jana e. beck</TextShadow>
+      </HeaderComponent>
+      <Layout location="/"></Layout>
+    </>
+  )
+}
 
 export default IndexPage

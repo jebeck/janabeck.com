@@ -79,34 +79,40 @@ const Layout = ({ children, location }) => {
 
   const onMobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH})`).matches
 
-  return onMobile ? null : (
+  return (
     <>
       <Global />
-      <StyledBackgroundImg image={data.bgImage} />
-      <Header location={location} />
-      <div
-        style={{
-          left: 0,
-          position: "absolute",
-          top: 0,
-          width: `calc(100vw - 15rem)`,
-        }}
-      >
-        <main
-          style={{
-            background: children ? transparentize(0.05, textBg) : "transparent",
-            margin: rhythm(1),
-            padding: rhythm(2),
-          }}
-        >
-          {children}
-        </main>
-        <FooterEl>
-          <TextShadow>
-            © jana e. beck, 2012–{`${new Date().getFullYear()}`}
-          </TextShadow>
-        </FooterEl>
-      </div>
+      {onMobile ? null : (
+        <>
+          <StyledBackgroundImg image={data.bgImage} />
+          <Header location={location} />
+          <div
+            style={{
+              left: 0,
+              position: "absolute",
+              top: 0,
+              width: `calc(100vw - 15rem)`,
+            }}
+          >
+            <main
+              style={{
+                background: children
+                  ? transparentize(0.05, textBg)
+                  : "transparent",
+                margin: rhythm(1),
+                padding: rhythm(2),
+              }}
+            >
+              {children}
+            </main>
+            <FooterEl>
+              <TextShadow>
+                © jana e. beck, 2012–{`${new Date().getFullYear()}`}
+              </TextShadow>
+            </FooterEl>
+          </div>
+        </>
+      )}
     </>
   )
 }
