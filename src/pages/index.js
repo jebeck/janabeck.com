@@ -3,10 +3,10 @@ import { grayscale } from "polished"
 import styled from "styled-components"
 
 import { bg, text } from "../utils/colors"
+import { isOnMobile } from "../utils/mobileMediaQuery"
 import Layout from "../components/layout"
 import Link from "../components/link"
 import { LINKS } from "../components/header"
-import { MOBILE_WIDTH } from "typography-breakpoint-constants"
 import { rhythm } from "../utils/typography"
 import { TextShadow } from "../styled"
 
@@ -46,15 +46,14 @@ const MobileNav = styled.nav`
 `
 
 const IndexPage = () => {
-  const onMobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH})`).matches
-  const HeaderComponent = onMobile ? MobileNameHeader : NameHeader
+  const HeaderComponent = isOnMobile ? MobileNameHeader : NameHeader
 
   return (
     <>
       <HeaderComponent>
         <TextShadow>jana e. beck</TextShadow>
       </HeaderComponent>
-      {onMobile ? (
+      {isOnMobile ? (
         <MobileNav>
           {LINKS.slice(1).map(({ href, path, text }) => {
             if (path) {

@@ -1,12 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { MOBILE_WIDTH } from "typography-breakpoint-constants"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { bg, text } from "../utils/colors"
+import { isOnMobile } from "../utils/mobileMediaQuery"
 
 export default function Link({ children, path }) {
-  const onMobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH})`).matches
   if (!path.startsWith("/")) {
     throw new Error("Path should start with `/`!")
   }
@@ -15,9 +14,9 @@ export default function Link({ children, path }) {
     <AniLink
       bg={bg}
       hex={text}
-      cover={!onMobile}
+      cover={!isOnMobile}
       direction="up"
-      paintDrip={onMobile}
+      paintDrip={isOnMobile}
       to={path}
     >
       {children}

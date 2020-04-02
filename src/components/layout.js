@@ -9,7 +9,6 @@ import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import BackgroundImage from "gatsby-background-image"
 import { grayscale } from "polished"
-import { MOBILE_WIDTH } from "typography-breakpoint-constants"
 import styled, { createGlobalStyle } from "styled-components"
 import { transparentize } from "polished"
 import { useStaticQuery, graphql } from "gatsby"
@@ -22,6 +21,7 @@ import "semantic-ui-less/semantic.less"
 import { analogous, bg, border, text, textBg } from "../utils/colors"
 import Header from "./header"
 import Link from "./link"
+import { isOnMobile } from "../utils/mobileMediaQuery"
 import { rhythm } from "../utils/typography"
 import { TextShadow } from "../styled"
 
@@ -62,8 +62,8 @@ const StyledBackgroundImg = styled(BackgroundImg)`
 
 const Global = createGlobalStyle`
   body {
-    background: ${({ onMobile }) =>
-      onMobile
+    background: ${({ isOnMobile }) =>
+      isOnMobile
         ? `linear-gradient(
     ${analogous[0]} 33.33%,
     ${analogous[1]} 46.67%,
@@ -71,11 +71,22 @@ const Global = createGlobalStyle`
     ${analogous[3]} 73.33%,
     ${analogous[4]} 86.67%
   )`
-        : "initial"};
+        : bg};
   }
   :focus {
     outline-color: #F9ADA0;
   }
+`
+
+const Main = styled.main`
+  background: ${({ hasChildren }) =>
+    hasChildren ? transparentize(0.05, textBg) : "transparent"};
+  li {
+    line-height: 1.4285em;
+  }
+  margin: ${({ isOnMobile }) => (isOnMobile ? rhythm(1 / 4) : rhythm(1))};
+  padding: ${({ isOnMobile }) =>
+    isOnMobile ? `${rhythm(1.5)} ${rhythm(1 / 2)}` : rhythm(1)};
 `
 
 const FooterEl = styled.footer`
@@ -86,10 +97,20 @@ const FooterEl = styled.footer`
   right: 1.125em;
 `
 
+function setVhVar() {
+  const vh = window.innerHeight * 0.01
+  document.documentElement.style.setProperty("--vh", `${vh}px`)
+}
+
 const Layout = ({ children, location }) => {
   useEffect(() => {
-    const vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty("--vh", `${vh}px`)
+    setVhVar()
+
+    if (isOnMobile) {
+      window.addEventListener("resize", setVhVar)
+
+      return window.removeEventListener("resive", setVhVar)
+    }
   }, [])
 
   const data = useStaticQuery(graphql`
@@ -104,19 +125,17 @@ const Layout = ({ children, location }) => {
     }
   `)
 
-  const onMobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH})`).matches
-
   return (
     <>
-      <Global onMobile={onMobile} />
-      {onMobile ? (
+      <Global isOnMobile={isOnMobile} />
+      {isOnMobile ? (
         <>
           {location === "/" ? null : (
             <nav
               style={{
-                right: rhythm(1 / 2),
+                right: rhythm(2 / 3),
                 position: "fixed",
-                top: rhythm(1 / 8),
+                top: rhythm(3 / 8),
               }}
             >
               <Link path="/" style={{ textDecoration: "none" }}>
@@ -124,7 +143,9 @@ const Layout = ({ children, location }) => {
               </Link>
             </nav>
           )}
-          <main>{children}</main>
+          <Main hasChildren={!!children} isOnMobile>
+            {children}
+          </Main>
         </>
       ) : (
         <>
@@ -138,17 +159,9 @@ const Layout = ({ children, location }) => {
               width: `calc(100vw - 15rem)`,
             }}
           >
-            <main
-              style={{
-                background: children
-                  ? transparentize(0.05, textBg)
-                  : "transparent",
-                margin: rhythm(1),
-                padding: rhythm(2),
-              }}
-            >
+            <Main hasChildren={!!children} isOnMobile={false}>
               {children}
-            </main>
+            </Main>
             <FooterEl>
               <TextShadow>
                 © jana e. beck, 2012–{`${new Date().getFullYear()}`}
