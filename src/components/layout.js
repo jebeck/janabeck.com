@@ -72,6 +72,8 @@ const Global = createGlobalStyle`
     ${analogous[4]} 86.67%
   )`
         : bg};
+    background-size: ${({ isOnMobile }) => (isOnMobile ? "125%" : "100%")};
+    height: ${({ isOnMobile }) => (isOnMobile ? "125%" : "100%")};
   }
   :focus {
     outline-color: #F9ADA0;
