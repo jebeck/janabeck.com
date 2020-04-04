@@ -2,7 +2,6 @@ import React from "react"
 import Markdown from "react-remarkable"
 
 import Layout from "../components/layout"
-import Link from "../components/link"
 import SEO from "../components/seo"
 
 /** TODO: IPA hint [= (ˈd͡ʒæ·nə bɛk)] + audio
@@ -26,8 +25,6 @@ you can also [electronic mail me](mailto:jana.eliz.beck@gmail.com).
 **presently**: data visualization engineer in [Stitch Fix Algorithms](https://algorithms-tour.stitchfix.com/)
 
 **formerly**: software engineer at [Tidepool](https://www.tidepool.org/)
-
-for more details about my coding experience and skills, head over to my [résumé](/resume).
 
 ## on the side
 

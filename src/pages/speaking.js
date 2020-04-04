@@ -7,18 +7,20 @@ import SEO from "../components/seo"
 const SpeakingPage = () => (
   <Layout location="/speaking">
     <SEO title="speaking" />
-    <Markdown>{`
+    <Markdown options={{ linkTarget: "_blank" }}>{`
+# speaking
+
 one of the things I've enjoyed most in my career switch from academia into tech is the vibrant _collaborative_ culture in tech, expressed in a high concentration at meetups and conferences where knowledge is freely (and often entertainingly!) shared.
 
 over the years, I've been deeply impressed, humbled, and inspired by all the speakers who put extensive amounts of time into communicating subtle or difficult or often-overlooked concepts for the benefit of all.
 
-# my speaking
+## my speaking
 
 I too love sharing what I've learned on the job or on the side—feel free to [get in touch](mailto:jana.eliz.beck@gmail.com) if you'd like to book me for your conference.
 
 I've had the honor of taking the stage at the following events:
 
-on **December 5th, 2019**, I presented [escaping flatland: a romance of data science in the browser (slides)](http://janabeck.com/flatland/) in Paris, France; video coming soon!
+on **December 5th, 2019**, I presented [escaping flatland: a romance of data science in the browser (video)](https://www.youtube.com/watch?v=SSZmQ_mEK4I) in Paris, France; the [slides](http://janabeck.com/flatland/) are also online.
 
 on **June 20th, 2019**, I presented "Data science in the browser: DX & UX" at [DinosaurJS](https://dinosaurjs.org/) in Denver, Colorado
 
