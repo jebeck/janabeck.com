@@ -8,6 +8,7 @@ import Layout from "../components/Layout"
 import Link from "../components/Link"
 import { LINKS } from "../components/Header"
 import { rhythm } from "../utils/typography"
+import SEO from "../components/SEO"
 import { TextShadow } from "../styled"
 
 const NameHeader = styled.h1`
@@ -79,6 +80,7 @@ const IndexPage = () => {
           })}
         </MobileNav>
       ) : null}
+      <SEO title="🏠" />
       <Layout location="/"></Layout>
     </>
   )
