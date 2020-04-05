@@ -1,8 +1,8 @@
 import React from "react"
 import Markdown from "react-remarkable"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 /** TODO: IPA hint [= (ˈd͡ʒæ·nə bɛk)] + audio
  * and will need Lato or another font for the IPA hint 😢

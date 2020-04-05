@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { transparentize } from "polished"
 
 import { textBg } from "../utils/colors"
-import Link from "./link"
+import Link from "./Link"
 
 export const LINKS = [
   {
@@ -33,7 +33,7 @@ export const LINKS = [
 const LinkText = styled.span`
   background-color: ${transparentize(0.4, textBg)};
   font-family: "Exo 2";
-  font-weight: ${props => (props.active ? 800 : 400)};
+  font-weight: ${(props) => (props.active ? 800 : 400)};
   padding: 0.225rem 0.75rem;
 `
 

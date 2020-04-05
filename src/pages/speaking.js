@@ -1,8 +1,8 @@
 import React from "react"
 import Markdown from "react-remarkable"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 const SpeakingPage = () => (
   <Layout location="/speaking">

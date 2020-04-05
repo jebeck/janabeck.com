@@ -4,9 +4,9 @@ import styled from "styled-components"
 
 import { bg, text } from "../utils/colors"
 import { isOnMobile } from "../utils/mobileMediaQuery"
-import Layout from "../components/layout"
-import Link from "../components/link"
-import { LINKS } from "../components/header"
+import Layout from "../components/Layout"
+import Link from "../components/Link"
+import { LINKS } from "../components/Header"
 import { rhythm } from "../utils/typography"
 import { TextShadow } from "../styled"
 
