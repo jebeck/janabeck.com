@@ -13,11 +13,6 @@ import styled, { createGlobalStyle } from "styled-components"
 import { transparentize } from "polished"
 import { useStaticQuery, graphql } from "gatsby"
 
-import "typeface-exo-2"
-import "typeface-source-sans-pro"
-
-import "semantic-ui-less/semantic.less"
-
 import { analogous, bg, border, text, textBg } from "../utils/colors"
 import Header from "./header"
 import Link from "./link"
