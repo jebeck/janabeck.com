@@ -9,4 +9,4 @@ const colors = {
 }
 
 export default colors
-export const { accent, analogous, bg, border, text, textBg } = colors
+export const { accent, analogous, bg, border, darkText, text, textBg } = colors
