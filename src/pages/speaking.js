@@ -14,7 +14,7 @@ one of the things I've enjoyed most in my career switch from academia into tech 
 
 over the years, I've been deeply impressed, humbled, and inspired by all the speakers who put extensive amounts of time into communicating subtle or difficult or often-overlooked concepts for the benefit of all.
 
-## my speaking
+## my talks
 
 I too love sharing what I've learned on the job or on the side—feel free to [get in touch](mailto:jana.eliz.beck@gmail.com) if you'd like to book me for your conference.
 
