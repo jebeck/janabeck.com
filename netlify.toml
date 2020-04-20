@@ -19,9 +19,9 @@
   to = "https://jebeck.github.io/diving-bell-talk/nightlybuild/"
 
 [[redirects]]
-  from = "/javascript-therapy/"
-  to ="http://janabeck.com/javascript-therapy/"
-
-[[redirects]]
   from = "/javascript-therapy/fsto2017*"
   to ="http://janabeck.com/javascript-therapy/fsto2017/"
+
+[[redirects]]
+  from = "/javascript-therapy/"
+  to ="http://janabeck.com/javascript-therapy/"
