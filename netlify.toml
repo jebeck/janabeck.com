@@ -20,8 +20,8 @@
 
 [[redirects]]
   from = "/javascript-therapy/fsto2017*"
-  to ="http://janabeck.com/javascript-therapy/fsto2017/"
+  to ="https://jebeck.github.io/javascript-therapy/fsto2017/"
 
 [[redirects]]
-  from = "/javascript-therapy/"
-  to ="http://janabeck.com/javascript-therapy/"
+  from = "/javascript-therapy*"
+  to ="https://jebeck.github.io/javascript-therapy/"
