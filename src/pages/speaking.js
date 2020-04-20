@@ -46,7 +46,7 @@ in **August 2015**, I presented [Flux for Data Visualization: A Preliminary Mani
 
 in **July 2015**, I presented [Power Tools for Powerful Visualization](http://janabeck.com/dataviz-power-tools/ 'Power Tools for Powerful Visualization slides') at [CascadiaFest 2015](http://2015.cascadiajs.com/ 'CascadiaFest 2015'); the [video and a transcript of this talk](http://2015.cascadiajs.com/speakers/jana-beck "Jana Beck's CascadiaFest 2015 talk") are available on the CascadiaFest website
 
-in **December 2014**, I presented ["tideline (and zipline)"](http://janabeck.com/d3-meetup-talk/, 'tideline (and zipline) slides') at the monthly Oakland meetup for the [Bay Area D3 User Group](https://www.meetup.com/Bay-Area-d3-User-Group/ 'Meetup: Bay Area D3 User Group')
+in **December 2014**, I presented ["tideline (and zipline)"](http://janabeck.com/d3-meetup-talk/ 'tideline (and zipline) slides') at the monthly Oakland meetup for the [Bay Area D3 User Group](https://www.meetup.com/Bay-Area-d3-User-Group/ 'Meetup: Bay Area D3 User Group')
 `}</Markdown>
   </Layout>
 )

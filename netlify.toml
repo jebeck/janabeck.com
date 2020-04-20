@@ -5,3 +5,23 @@
 [[redirects]]
   from = "/flatland*"
   to = "https://jebeck.github.io/flatland/"
+
+[[redirects]]
+  from = "/better-living-thru-components*"
+  to = "https://jebeck.github.io/better-living-thru-components/"
+
+[[redirects]]
+  from = "/diving-bell-talk/codemania*"
+  to = "https://jebeck.github.io/diving-bell-talk/codemania/"
+
+[[redirects]]
+  from = "/diving-bell-talk/nightlybuild*"
+  to = "https://jebeck.github.io/diving-bell-talk/nightlybuild/"
+
+[[redirects]]
+  from = "/javascript-therapy/"
+  to ="http://janabeck.com/javascript-therapy/"
+
+[[redirects]]
+  from = "/javascript-therapy/fsto2017*"
+  to ="http://janabeck.com/javascript-therapy/fsto2017/"
