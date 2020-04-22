@@ -37,3 +37,7 @@
 [[redirects]]
   from = "/flux-for-dataviz*"
   to = "https://jebeck.github.io/flux-for-dataviz/"
+
+[[redirects]]
+  from = "/d3-meetup-talk*"
+  to = "https://jebeck.github.io/d3-meetup-talk/"
