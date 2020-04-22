@@ -24,8 +24,16 @@
 
 [[redirects]]
   from = "/javascript-therapy/fsto2017*"
-  to ="https://jebeck.github.io/javascript-therapy/fsto2017/"
+  to = "https://jebeck.github.io/javascript-therapy/fsto2017/"
 
 [[redirects]]
   from = "/javascript-therapy*"
-  to ="https://jebeck.github.io/javascript-therapy/"
+  to = "https://jebeck.github.io/javascript-therapy/"
+
+[[redirects]]
+  from = "/high-stakes-react*"
+  to = "https://jebeck.github.io/high-stakes-react/"
+
+[[redirects]]
+  from = "/flux-for-dataviz*"
+  to = "https://jebeck.github.io/flux-for-dataviz/"
