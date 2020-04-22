@@ -40,7 +40,7 @@ in **August 2017**, I presented [React-ing htmlFor=empathy (video)](https://www.
 
 in **June 2017**, I presented [JavaScript therapy (video)](https://youtu.be/acIOV8wtkOo?t=5h16m00s 'YouTube: JavaScript therapy at Web Rebels') at [Web Rebels](https://www.webrebels.org/ 'Web Rebels') in Oslo, Norway
 
-in **October 2016**, I presented [High-stakes React (slides)](http://janabeck.com/high-stakes-react/#/?_k=1u1qb0 'High-stakes React slides') at [ReactNL](http://reactnl.org/ 'React NL') in Amsterdam
+in **October 2016**, I presented [High-stakes React (slides)](http://janabeck.com/high-stakes-react/ 'High-stakes React slides') at [ReactNL](http://reactnl.org/ 'React NL') in Amsterdam
 
 in **August 2015**, I presented [Flux for Data Visualization: A Preliminary Manifesto (slides)](http://janabeck.com/flux-for-dataviz/ 'Flux for Data Visualization slides') at [React Rally](http://www.reactrally.com/ 'React Rally'); the [video of this talk](https://youtu.be/Fb8QB4FoKrI 'Video of Flux for Data Visualization talk') is available on YouTube
 
