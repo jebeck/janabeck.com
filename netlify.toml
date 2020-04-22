@@ -15,8 +15,8 @@
   to = "https://jebeck.github.io/diving-bell-talk/codemania/"
 
 [[redirects]]
-  from = "/diving-bell-talk/nightlybuild*"
-  to = "https://jebeck.github.io/diving-bell-talk/nightlybuild/"
+  from = "/diving-bell-talk/nightly-build*"
+  to = "https://jebeck.github.io/diving-bell-talk/nightly-build/"
 
 [[redirects]]
   from = "/javascript-therapy/fsto2017*"
