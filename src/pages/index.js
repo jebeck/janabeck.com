@@ -18,8 +18,8 @@ const NameHeader = styled.h1`
   position: fixed;
   top: ${rhythm(1 / 4)};
   z-index: 2;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: ${bg};
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: ${bg}; */
 `
 
 const MobileNameHeader = styled(NameHeader)`
