@@ -42,7 +42,7 @@
     "gatsby-plugin-typography": "^2.5.10",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-sharp": "^2.5.12",
-    "gsap": "^3.4.2",
+    "gsap": "^3.6.0",
     "jpeg-js": "^0.4.1",
     "less": "^3.12.2",
     "lodash": "^4.17.19",
